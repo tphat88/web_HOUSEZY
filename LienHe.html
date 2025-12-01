@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HOUSEZY</title>
+    <!--link reset css (normalizer css cdn) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+
+    <!-- link file css -->
+    <link rel="stylesheet" href="./asset/css/main.css">
+    <link rel="stylesheet" href="./asset/css/LienHe.css">
+
+    <!-- link font Open sans -->
+     <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- HEADER -->
+    <header class="navbar">
+        <div class="navbar__logo"> <img src="./asset/icon/HOUSEZY.svg" alt="Logo HOUSEZY"></div>
+        <nav class="navbar__menu">
+            <ul class="navbar__list">
+                <li class="navbar__item"><a href="./index.html" class="navbar__link">Trang Chủ</a></li>
+                <li class="navbar__item nav__item--has-dropdown">
+                    <a href="./DanhMucSanPham.html" class="navbar__link">Sản Phẩm</a>
+                    <div class="dropdown">
+                        <div class="dropdown__column">
+                            <div class="dropdown__title">Nồi</div>
+                            <ul class="dropdown__list">
+                                <li class="dropdown__item"><a href="#" class="dropdown__link">Nồi inox</a></li>
+                                <li class="dropdown__item"><a href="#" class="dropdown__link">Nồi hấp</a></li>
+                                <li class="dropdown__item"><a href="#" class="dropdown__link">Nồi lẩu</a></li>
+                            </ul>
+                        </div>
+                        <div class="dropdown__column">
+                            <div class="dropdown__title">Chảo</div>
+                            <ul class="dropdown__list">
+                                <li class="dropdown__item"><a href="#" class="dropdown__link">Chảo inox</a></li>
+                                <li class="dropdown__item"><a href="#" class="dropdown__link">Chảo nhôm</a></li>
+                                <li class="dropdown__item"><a href="#" class="dropdown__link">Chảo chống dính</a></li>
+                            </ul>
+                        </div>
+                        <div class="dropdown__column">
+                            <div class="dropdown__title">Nồi điện</div>
+                            <ul class="dropdown__list">
+                                <li class="dropdown__item"><a href="#" class="dropdown__link">Nồi cơm</a></li>
+                                <li class="dropdown__item"><a href="#" class="dropdown__link">Nồi chiên không dầu</a></li>
+                                <li class="dropdown__item"><a href="#" class="dropdown__link">Nồi lẩu điện</a></li>
+                                <li class="dropdown__item"><a href="#" class="dropdown__link">Nồi áp suất điện</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </li>
+                <li class="navbar__item"><a href="./DanhMucTinTuc.html" class="navbar__link">Tin Tức</a></li>
+                <li class="navbar__item"><a href="./LienHe.html" class="navbar__link">Liên Hệ</a></li>
+            </ul>
+        </nav>
+        <div class="navbar__actions">
+            <div class="navbar__search">
+                <input type="text" class="navbar__search-input" placeholder="Tìm kiếm">
+                <button class="navbar__search-button"><img src="./asset/icon/Icon-search.svg" alt="Icon Search"></button>
+            </div>
+            <div class="navbar__icons">
+                <a class="navbar__icon navbar__icon--user" href="#"><img src="./asset/icon/Icon-user.svg" alt="Icon User"></a>
+                <button class="navbar__icon navbar__icon--cart js__cart-btn"><img src="./asset/icon/Icon-cart.svg" alt="Icon Cart"><span class="navbar__cart-count">2</span></button>
+            </div>
+            <label for="navbar__mobile-check" class="navbar__bars-btn">
+                <img src="./asset/icon/icon-bars.svg" alt="icon bars">
+            </label>
+        </div>
+        <!-- nav mobile -->
+        <input type="checkbox" hidden class="navbar__mobile-input" id="navbar__mobile-check">
+
+        <label for="navbar__mobile-check" class="navbar__overlay"></label>  
+
+        <nav class="navbar__mobile">
+
+            <div class="navbar__mobile-logo">
+                <img src="./asset/icon/HOUSEZY.svg" alt="Logo HOUSEZY">
+                <label for="navbar__mobile-check">
+                    <img class="navbar__mobile-close" src="./asset/icon/icon-close.svg" alt="icon close">
+                </label>
+            </div>
+
+            <ul class="navbar__mobile-list">
+                <li class="navbar__mobile-item"><a href="./index.html" class="navbar__mobile-link">Trang Chủ</a></li>
+                <li class="navbar__mobile-item">
+                    <a href="./DanhMucSanPham.html" class="navbar__mobile-link">Sản Phẩm</a>
+
+                    <input type="checkbox" hidden name="" class="nav__mobile--has-dropdown" id="nav__mobile-item--has-dropdown">
+                    <label for="nav__mobile-item--has-dropdown"><img src="./asset/icon/icon-down-black.svg" alt="icon down"></label>
+
+                    <div class="dropdown__mobile">
+                        <div class="dropdown__column">
+                            <div class="dropdown__title">Nồi</div>
+                            <ul class="dropdown__mobile-list">
+                                <li class="dropdown__item"><a href="#" class="dropdown__link">Nồi inox</a></li>
+                                <li class="dropdown__item"><a href="#" class="dropdown__link">Nồi hấp</a></li>
+                                <li class="dropdown__item"><a href="#" class="dropdown__link">Nồi lẩu</a></li>
+                            </ul>
+                        </div>
+                        <div class="dropdown__column">
+                            <div class="dropdown__title">Chảo</div>
+                            <ul class="dropdown__mobile-list">
+                                <li class="dropdown__item"><a href="#" class="dropdown__link">Chảo inox</a></li>
+                                <li class="dropdown__item"><a href="#" class="dropdown__link">Chảo nhôm</a></li>
+                                <li class="dropdown__item"><a href="#" class="dropdown__link">Chảo chống dính</a></li>
+                            </ul>
+                        </div>
+                        <div class="dropdown__column">
+                            <div class="dropdown__title">Nồi điện</div>
+                            <ul class="dropdown__mobile-list">
+                                <li class="dropdown__item"><a href="#" class="dropdown__link">Nồi cơm</a></li>
+                                <li class="dropdown__item"><a href="#" class="dropdown__link">Nồi chiên không dầu</a></li>
+                                <li class="dropdown__item"><a href="#" class="dropdown__link">Nồi lẩu điện</a></li>
+                                <li class="dropdown__item"><a href="#" class="dropdown__link">Nồi áp suất điện</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </li>
+                <li class="navbar__mobile-item"><a href="./DanhMucTinTuc.html" class="navbar__mobile-link">Tin Tức</a></li>
+                <li class="navbar__mobile-item"><a href="./LienHe.html" class="navbar__mobile-link">Liên Hệ</a></li>
+            </ul>
+        </nav>
+        <!-- nav mobile -->
+    </header>
+
+    <!--BREADCRUMB  -->
+    <ul class="breadcrumb">
+        <li><a href="./index.html">Trang chủ</a></li>
+        <li><img src="./asset/icon/icon-next.svg" alt="icon next"></li>
+        <li><a href="./LienHe.html">Liên hệ</a></li>
+    </ul>
+
+    <!-- CONTENT -->
+    <section class="contact">
+        <div class="contact__container">
+            <div class="contact__form">
+                <div class="contact__title">Liên Hệ Với Chúng Tôi</div>
+                <p class="contact__description">
+                    Hãy liên hệ với chúng tôi nếu bạn có bất kỳ câu hỏi, thắc mắc hoặc nhu cầu hỗ trợ nào.
+                    Hoặc bạn có thể để lại thông tin trong biểu mẫu liên hệ, chúng tôi sẽ phản hồi trong vòng 24h.
+                </p>
+                <form class="form">
+                    <input type="text" class="form__input" placeholder="Họ và tên">
+                    <div class="form__group">
+                        <input type="text" class="form__input" placeholder="Số điện thoại">
+                        <input type="email" class="form__input" placeholder="Email">
+                    </div>
+                    <input type="text" class="form__input" placeholder="Tiêu đề">
+                    <textarea class="form__textarea" placeholder="Nội dung"></textarea>
+                    <button type="submit" class="form__button">GỬI</button>
+                </form>
+                <div class="contact__info">
+                    <p><span class="contact__info-bold">Địa chỉ:</span> 27 Hoàng Hoa Thám, P. 6, Q. Bình Thạnh, TP. Hồ Chí Minh</p>
+                    <p><span class="contact__info-bold">Số điện thoại:</span> 0888 869 300</p>
+                    <p><span class="contact__info-bold">Email:</span> info@epal.vn</p> <br>
+                    <p>Tư vấn hỗ trợ (8:00 - 17:30)</p>
+                    <p>0888 869 300</p>
+                    <p>0888 869 300</p>
+                </div>
+            </div>
+            <div class="contact__map">
+                <img src="./asset/img/img-map.png" alt="anh map">
+            </div>
+        </div>
+    </section>    
+
+
+    <!-- LABEL__2 -->
+    <div class="benefits">
+        <div class="benefits__list">
+            <div class="benefits__item">
+                <img src="./asset/icon/icon-box.svg" alt="Giao hàng miễn phí" class="benefits__icon">
+                <p class="benefits__text">Miễn Phí Giao Hàng Với Đơn Hàng Từ 900K</p>
+            </div>
+
+            <div class="benefits__item">
+                <img src="./asset/icon/icon-Truck.svg" alt="Giao hàng tận nơi" class="benefits__icon">
+                <p class="benefits__text">Hỗ Trợ Giao Hàng Tận Nơi</p>
+            </div>
+    
+            <div class="benefits__item">
+                <img src="./asset/icon/icon-medal.svg" alt="Bảo hành chính hãng" class="benefits__icon">
+                <p class="benefits__text">Cam Kết Bảo Hành Chính Hãng</p>
+            </div>
+    
+            <div class="benefits__item">
+                <img src="./asset/icon/icon-voucher.svg" alt="Ưu đãi voucher" class="benefits__icon">
+                <p class="benefits__text">Ưu Đãi Voucher Lên Đến 500K</p>
+            </div>
+    
+        </div>
+    </div>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="footer__container">
+    
+            <!-- Cột 1: Thông tin công ty -->
+            <div class="footer__column footer__company">
+                <div class="footer__logo"><img src="./asset/icon/HOUSEZY.svg" alt="logo HOUSEZY"></div>
+                <p class="footer__name font600 ">CÔNG TY CỔ PHẦN HOUSEZY</p>
+                
+                <div class="footer__contact font400">
+                    <p class="footer__text"><span class="font600">Địa chỉ:</span> 27 Hoàng Hoa Thám, P. 6, Q. Bình Thạnh, TP. Hồ Chí Minh</p>
+                    <p class="footer__text"><span class="font600">Số điện thoại:</span> 0888 869 300</p>
+                    <p class="footer__text"><sapn class="font600">Email:</sapn> HOUSEZY@epal.vn</p>
+                </div>
+
+                <div class="footer__support font400">
+                    <p class="footer__text">Tư vấn hỗ trợ (8:00 - 17:30)</p>
+                    <p class="footer__text">0888 869 300</p>
+                    <p class="footer__text">0888 869 300</p>
+                </div>
+    
+                <!-- Mạng xã hội -->
+                <div class="footer__social">
+                    <a href="#" class="footer__social-icon"><img src="./asset/icon/icon-facebook.svg" alt="Facebook"></a>
+                    <a href="#" class="footer__social-icon"><img src="./asset/icon/icon-instargram.svg" alt="Instagram"></a>
+                    <a href="#" class="footer__social-icon"><img src="./asset/icon/icon-messenger.svg" alt="Messenger"></a>
+                    <a href="#" class="footer__social-icon"><img src="./asset/icon/icon-zalo.svg" alt="Zalo"></a>
+                    <a href="#" class="footer__social-icon"><img src="./asset/icon/icon-X.svg" alt="X"></a>
+                    <a href="#" class="footer__social-icon"><img src="./asset/icon/icon-pinterest.svg" alt="Pinterest"></a>
+                </div>
+            </div>
+    
+            <!-- Cột 2: Về HOUSEZY -->
+            <div class="footer__column footer__about">
+                <div class="footer__title font600">Về HOUSEZY</div>
+                <ul class="footer__list font400">
+                    <li class="footer__item"><a href="#" class="footer__link">Giới Thiệu</a></li>
+                    <li class="footer__item"><a href="./index.html" class="footer__link">Trang Chủ</a></li>
+                    <li class="footer__item"><a href="./DanhMucSanPham.html" class="footer__link">Sản Phẩm</a></li>
+                    <li class="footer__item"><a href="./DanhMucTinTuc.html" class="footer__link">Tin Tức</a></li>
+                    <li class="footer__item"><a href="./LienHe.html" class="footer__link">Liên Hệ</a></li>
+                </ul>
+            </div>
+            <!-- Cột 3: Chính Sách -->
+            <div class="footer__column footer__policy">
+                <div class="footer__title font600">Chính Sách</div>
+                <ul class="footer__list font400">
+                    <li class="footer__item"><a href="./TrungTamHoTro.html" class="footer__link">Chính Sách Hoàn Tiền</a></li>
+                    <li class="footer__item"><a href="#" class="footer__link">Chính Sách Giao Hàng</a></li>
+                    <li class="footer__item"><a href="#" class="footer__link">Chính Sách Bảo Hành Thu Đổi</a></li>
+                    <li class="footer__item"><a href="#" class="footer__link">Chính Sách Khách Hàng Thân Thiết</a></li>
+                    <li class="footer__item"><a href="#" class="footer__link">Chính Sách Bảo Mật Thông Tin Khách Hàng</a></li>
+                    <li class="footer__item"><a href="#" class="footer__link">Chính Sách Xử Lý Dữ Liệu Cá Nhân</a></li>
+                </ul>
+            </div>
+    
+        </div>
+    </footer>
+    <!-- Dòng bản quyền -->
+    <div class="footer__bottom">
+        <p class="footer__copyright">© All Rights Reserved. Design By EPAL Solution.</p>
+    </div>
+
+    <!-- modal form giỏ hàng -->
+    <div class="cart__modal js__cart-modal">
+        <div class="cart__content js__cart-content">
+            <div class="cart__header">
+                <div class="cart__title">Giỏ Hàng (2)</div>
+                <button class="cart__close-button js__cart-modal--close">
+                    <img src="./asset/icon/icon-close.svg" alt="icon close">
+                </button>
+            </div>
+    
+            <ul class="cart__items">
+                <li class="cart__item">
+                    <div class="cart__item-image-wrapper">
+                        <img src="./asset/img/img-chao.png" alt="Chảo Inox Impact" class="cart__item-image">
+                    </div>
+                    <div class="cart__item-details">
+                        <div class="cart__item-name">Chảo Inox Impact</div>
+                        <p class="cart__item-option">Màu bạc, 20cm</p>
+                        <div class="cart__item-price">
+                            <span class="cart__item-price--old">300.000đ</span>
+                            <span class="cart__item-price--current">250.000đ</span>
+                        </div>
+                        <div class="cart__item-quantity">
+                            <button class="cart__quantity-btn">−</button>
+                            <span class="cart__quantity-value">1</span>
+                            <button class="cart__quantity-btn">+</button>
+                        </div>
+                    </div>
+                    <button class="cart__item-remove-button">
+                        <img src="./asset/icon/icon-bin.svg" alt="icon bin">
+                    </button>
+                </li>
+    
+                <li class="cart__item">
+                    <div class="cart__item-image-wrapper">
+                        <img src="./asset/img/img-chao.png" alt="Chảo Inox Impact" class="cart__item-image">
+                    </div>
+                    <div class="cart__item-details">
+                        <div class="cart__item-name">Chảo Inox Impact</div>
+                        <p class="cart__item-option">Màu bạc, 24cm</p>
+                        <div class="cart__item-price">
+                            <span class="cart__item-price--old">300.000đ</span>
+                            <span class="cart__item-price--current">250.000đ</span>
+                        </div>
+                        <div class="cart__item-quantity">
+                            <button class="cart__quantity-btn">−</button>
+                            <span class="cart__quantity-value">1</span>
+                            <button class="cart__quantity-btn">+</button>
+                        </div>
+                    </div>
+                    <button class="cart__item-remove-button">
+                        <img src="./asset/icon/icon-bin.svg" alt="icon bin">
+                    </button>
+                </li>
+            </ul>
+    
+            <div class="cart__footer">
+                <a  href="#" class="cart__checkout-button" >THANH TOÁN</a>
+                <a href="./DanhMucSanPham.html" class="cart__continue-shopping-button" >TIẾP TỤC MUA HÀNG</a>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const cartBtn = document.querySelector('.js__cart-btn') 
+        const modalCart = document.querySelector('.js__cart-modal')
+        const modalCartClose = document.querySelector('.js__cart-modal--close')
+        const modalCartContent = document.querySelector('.js__cart-content')
+
+        function showCartForm() {
+            modalCart.classList.add('open')
+        }
+
+        function  hideCartForm() {
+            modalCart.classList.remove('open')
+        }
+        
+        cartBtn.addEventListener('click', showCartForm)
+
+        modalCart.addEventListener('click', hideCartForm )
+
+        modalCartClose.addEventListener('click', hideCartForm)
+
+        modalCartContent.addEventListener('click', function(event){
+            event.stopPropagation()
+        } )
+    </script>
+    
+</html>

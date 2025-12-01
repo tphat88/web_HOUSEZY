@@ -1,0 +1,669 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HOUSEZY</title>
+    <!--link reset css (normalizer css cdn) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+    <!-- link file css -->
+    <link rel="stylesheet" href="./asset/css/main.css">
+    <link rel="stylesheet" href="./asset/css/ChiTietSanPham.css">
+    <!-- link font Open sans -->
+     <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- HEADER -->
+    <header class="navbar">
+        <div class="navbar__logo"> <img src="./asset/icon/HOUSEZY.svg" alt="Logo HOUSEZY"></div>
+        <nav class="navbar__menu">
+            <ul class="navbar__list">
+                <li class="navbar__item"><a href="./index.html" class="navbar__link">Trang Chủ</a></li>
+                <li class="navbar__item nav__item--has-dropdown">
+                    <a href="./DanhMucSanPham.html" class="navbar__link">Sản Phẩm</a>
+                    <div class="dropdown">
+                        <div class="dropdown__column">
+                            <div class="dropdown__title">Nồi</div>
+                            <ul class="dropdown__list">
+                                <li class="dropdown__item"><a href="#" class="dropdown__link">Nồi inox</a></li>
+                                <li class="dropdown__item"><a href="#" class="dropdown__link">Nồi hấp</a></li>
+                                <li class="dropdown__item"><a href="#" class="dropdown__link">Nồi lẩu</a></li>
+                            </ul>
+                        </div>
+                        <div class="dropdown__column">
+                            <div class="dropdown__title">Chảo</div>
+                            <ul class="dropdown__list">
+                                <li class="dropdown__item"><a href="#" class="dropdown__link">Chảo inox</a></li>
+                                <li class="dropdown__item"><a href="#" class="dropdown__link">Chảo nhôm</a></li>
+                                <li class="dropdown__item"><a href="#" class="dropdown__link">Chảo chống dính</a></li>
+                            </ul>
+                        </div>
+                        <div class="dropdown__column">
+                            <div class="dropdown__title">Nồi điện</div>
+                            <ul class="dropdown__list">
+                                <li class="dropdown__item"><a href="#" class="dropdown__link">Nồi cơm</a></li>
+                                <li class="dropdown__item"><a href="#" class="dropdown__link">Nồi chiên không dầu</a></li>
+                                <li class="dropdown__item"><a href="#" class="dropdown__link">Nồi lẩu điện</a></li>
+                                <li class="dropdown__item"><a href="#" class="dropdown__link">Nồi áp suất điện</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </li>
+                <li class="navbar__item"><a href="./DanhMucTinTuc.html" class="navbar__link">Tin Tức</a></li>
+                <li class="navbar__item"><a href="./LienHe.html" class="navbar__link">Liên Hệ</a></li>
+            </ul>
+        </nav>
+        <div class="navbar__actions">
+            <div class="navbar__search">
+                <input type="text" class="navbar__search-input" placeholder="Tìm kiếm">
+                <button class="navbar__search-button"><img src="./asset/icon/Icon-search.svg" alt="Icon Search"></button>
+            </div>
+            <div class="navbar__icons">
+                <a class="navbar__icon navbar__icon--user" href="#"><img src="./asset/icon/Icon-user.svg" alt="Icon User"></a>
+                <button class="navbar__icon navbar__icon--cart js__cart-btn"><img src="./asset/icon/Icon-cart.svg" alt="Icon Cart"><span class="navbar__cart-count">2</span></button>
+            </div>
+            <label for="navbar__mobile-check" class="navbar__bars-btn">
+                <img src="./asset/icon/icon-bars.svg" alt="icon bars">
+            </label>
+        </div>
+        <!-- nav mobile -->
+        <input type="checkbox" hidden class="navbar__mobile-input" id="navbar__mobile-check">
+
+        <label for="navbar__mobile-check" class="navbar__overlay"></label>  
+
+        <nav class="navbar__mobile">
+
+            <div class="navbar__mobile-logo">
+                <img src="./asset/icon/HOUSEZY.svg" alt="Logo HOUSEZY">
+                <label for="navbar__mobile-check">
+                    <img class="navbar__mobile-close" src="./asset/icon/icon-close.svg" alt="icon close">
+                </label>
+            </div>
+
+            <ul class="navbar__mobile-list">
+                <li class="navbar__mobile-item"><a href="./index.html" class="navbar__mobile-link">Trang Chủ</a></li>
+                <li class="navbar__mobile-item">
+                    <a href="./DanhMucSanPham.html" class="navbar__mobile-link">Sản Phẩm</a>
+
+                    <input type="checkbox" hidden name="" class="nav__mobile--has-dropdown" id="nav__mobile-item--has-dropdown">
+                    <label for="nav__mobile-item--has-dropdown"><img src="./asset/icon/icon-down-black.svg" alt="icon down"></label>
+
+                    <div class="dropdown__mobile">
+                        <div class="dropdown__column">
+                            <div class="dropdown__title">Nồi</div>
+                            <ul class="dropdown__mobile-list">
+                                <li class="dropdown__item"><a href="#" class="dropdown__link">Nồi inox</a></li>
+                                <li class="dropdown__item"><a href="#" class="dropdown__link">Nồi hấp</a></li>
+                                <li class="dropdown__item"><a href="#" class="dropdown__link">Nồi lẩu</a></li>
+                            </ul>
+                        </div>
+                        <div class="dropdown__column">
+                            <div class="dropdown__title">Chảo</div>
+                            <ul class="dropdown__mobile-list">
+                                <li class="dropdown__item"><a href="#" class="dropdown__link">Chảo inox</a></li>
+                                <li class="dropdown__item"><a href="#" class="dropdown__link">Chảo nhôm</a></li>
+                                <li class="dropdown__item"><a href="#" class="dropdown__link">Chảo chống dính</a></li>
+                            </ul>
+                        </div>
+                        <div class="dropdown__column">
+                            <div class="dropdown__title">Nồi điện</div>
+                            <ul class="dropdown__mobile-list">
+                                <li class="dropdown__item"><a href="#" class="dropdown__link">Nồi cơm</a></li>
+                                <li class="dropdown__item"><a href="#" class="dropdown__link">Nồi chiên không dầu</a></li>
+                                <li class="dropdown__item"><a href="#" class="dropdown__link">Nồi lẩu điện</a></li>
+                                <li class="dropdown__item"><a href="#" class="dropdown__link">Nồi áp suất điện</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </li>
+                <li class="navbar__mobile-item"><a href="./DanhMucTinTuc.html" class="navbar__mobile-link">Tin Tức</a></li>
+                <li class="navbar__mobile-item"><a href="./LienHe.html" class="navbar__mobile-link">Liên Hệ</a></li>
+            </ul>
+        </nav>
+        <!-- nav mobile -->
+    </header>
+
+    <!--BREADCRUMB  -->
+    <ul class="breadcrumb">
+        <li><a href="./index.html">Trang chủ</a></li>
+        <li><img src="./asset/icon/icon-next.svg" alt="icon next"></li>
+        <li><a href="./DanhMucSanPham.html">Sản phẩm</a></li>
+        <li><img src="./asset/icon/icon-next.svg" alt="icon next"></li>
+        <li><a href="./ChiTietSanPham.html">Chi tiết sản phẩm</a></li>
+
+    </ul>
+
+    <!-- CONTENT -->
+    <div class="product">
+        <!-- LEFT -->
+        <div class="product__left">
+            <!-- Gallery -->
+                <div class="product__gallery">
+                    <div class="product__image">
+                        <img src="./asset/img/img-chao-size3.png" alt="Chảo Inox Impact">
+                    </div>
+                    <div class="product__thumbnails">
+                        <img class="product__thumbnail product__thumbnail--active" src="./asset/img/img-chao1.png" alt="Thumbnail 1">
+                        <img class="product__thumbnail" src="./asset/img/img-chao2.png" alt="Thumbnail 2">
+                        <img class="product__thumbnail" src="./asset/img/img-chao3.png" alt="Thumbnail 3">
+                    </div>
+                </div>
+            
+            <!-- SIDEBAR__MOBILE --> 
+            <div class="product__mobile-sidebar">
+                <div class="product__mobile-title">Chảo Inox Impact</div>
+
+                <div class="product__mobile-rating">
+                    <span class="product__mobile-score">4.8</span>
+                    <span class="product__mobile-stars">
+                        <img  src="./asset/icon/icon-sao.svg" alt="stars">
+                        <img src="./asset/icon/icon-sao.svg" alt="stars">
+                        <img src="./asset/icon/icon-sao.svg" alt="stars">
+                        <img src="./asset/icon/icon-sao.svg" alt="stars">
+                        <img src="./asset/icon/icon-sao-0,5.svg" alt="stars">
+                    </span>
+                    <span class="product__mobile-reviews">5 đánh giá</span>
+                </div>
+            
+                <div class="product__mobile-price">
+                    <span class="product__mobile-price-old">300.000đ</span>
+                    <span class="product__mobile-price-new">250.000đ</span>
+                    <span class="product__mobile-discount">-16%</span>
+                </div>
+            
+                <div class="product__mobile-options">
+                    <div class="product__mobile-colors">
+                        <p class="product__mobile-label">Màu</p>
+                        <button class="product__mobile-color product__mobile-color--white"></button>
+                        <button class="product__mobile-color product__mobile-color--green"></button>
+                        <button class="product__mobile-color product__mobile-color--orange"></button>
+                    </div>
+            
+                    <div class="product__mobile-sizes">
+                        <p class="product__mobile-label">Kích thước</p>
+                        <button class="product__mobile-size">20cm</button>
+                        <button class="product__mobile-size">24cm</button>
+                        <button class="product__mobile-size">28cm</button>
+                    </div>
+            
+                    <div class="product__mobile-quantity">
+                        <p class="product__mobile-label">Số lượng</p>
+                        <button class="product__mobile-quantity-btn">−</button>
+                        <span class="product__mobile-quantity-value">1</span>
+                        <button class="product__mobile-quantity-btn">+</button>
+                    </div>
+                </div>
+            
+                <div class="product__mobile-actions">
+                    <button class="product__mobile-buy">MUA NGAY</button>
+                    <button class ="product__mobile-cart">
+                        <img src="./asset/icon/Icon-cart.svg" alt="button cart">
+                    </button>
+                </div>
+            </div>
+    
+            <!-- Mô Tả Sản Phẩm -->
+            <div class="product__description">
+                <div class="product__description-title">Mô Tả</div>
+                <p class="product__description-text">
+                    Chảo Inox Impact là sản phẩm chảo Inox phù hợp với mọi căn bếp gia đình, được ứng dụng công nghệ dập đáy Impact Bonding hiện đại cho đáy phẳng hoàn hảo, không cong vênh hay lồi đáy và lớp chống dính vân đá bền bỉ. Có trong tay chiếc chảo Inox Impact sẽ giúp bạn “thiên biến vạn hóa” mọi món ăn cho bữa cơm gia đình. 
+                </p>
+                <div class="product__description-subtitle">• Thiết kế tiện dụng</div>
+                <p class="product__description-text">
+                    Chảo Inox Impact có thiết kế tuy đơn giản nhưng tiện lợi và dễ sử dụng cho mọi gia đình. Với hình dáng chảo được thiết kế hơi lồi ở thân chảo giúp tối ưu lượng thức ăn và hạn chế thức ăn rơi vãi ra ngoài, cùng với đó là bề ngoài được phủ inox sáng bóng làm cho căn bếp thêm phần sang trọng
+                </p>
+                <div class="product__description-image">
+                    <img src="./asset/img/img-thietketiendung.png" alt="Thiết kế tiện dụng">
+                </div>
+                <div class="product__description-subtitle">• Đa dạng kích thước, tha hồ nấu nướng</div>
+                <p class="product__description-text">
+                    Ngoài chảo IN20M5, dòng chảo Inox Impact có tới 3 mã chảo với 3 kích thước khác nhau, đáp ứng đa dạng nhu cầu nấu nướng của gia đình.
+                </p>
+            </div>
+    
+            <!-- Đánh Giá -->
+            <div class="review">
+                <div class="review__title">Đánh Giá</div>   
+            
+                <div class="review__total">
+                    <div class="review__summary">
+                        <div class="review__rating">
+                            <span class="review__score">4.8</span>
+                            <img class="review__stars" src="./asset/icon/icon-sao-to.svg" alt="Big Review Stars">
+                        </div>
+                        <div class="review__count">(5 đánh giá)</div>
+                        <button class="review__button js__rating-btn">VIẾT ĐÁNH GIÁ</button>
+                    </div>
+            
+                    <div class="review__progress">
+                        <div class="review__progress-item">
+                            <span class="review__progress-stars">5</span>
+                            <img src="./asset/icon/icon-sao.svg" alt="Review Stars">
+                            <div class="review__progress-bar"><div class="review__progress-fill" style="width: 80%;"></div></div>
+                            <span class="review__progress-count">4 đánh giá</span>
+                        </div>
+                        <div class="review__progress-item">
+                            <span class="review__progress-stars">4</span>
+                            <img src="./asset/icon/icon-sao.svg" alt="Review Stars">
+                            <div class="review__progress-bar"><div class="review__progress-fill" style="width: 20%;"></div></div>
+                            <span class="review__progress-count">1 đánh giá</span>
+                        </div>
+                        <div class="review__progress-item">
+                            <span class="review__progress-stars">3</span>
+                            <img src="./asset/icon/icon-sao.svg" alt="Review Stars">
+                            <div class="review__progress-bar"><div class="review__progress-fill" style="width: 0%;"></div></div>
+                            <span class="review__progress-count">0 đánh giá</span>
+                        </div>
+                        <div class="review__progress-item">
+                            <span class="review__progress-stars">2</span>
+                            <img src="./asset/icon/icon-sao.svg" alt="Review Stars">
+                            <div class="review__progress-bar"><div class="review__progress-fill" style="width: 0%;"></div></div>
+                            <span class="review__progress-count">0 đánh giá</span>
+                        </div>
+                        <div class="review__progress-item">
+                            <span class="review__progress-stars">1</span>
+                            <img src="./asset/icon/icon-sao.svg" alt="Review Stars">
+                            <div class="review__progress-bar"><div class="review__progress-fill" style="width: 0%;"></div></div>
+                            <span class="review__progress-count">0 đánh giá</span>
+                        </div>
+                    </div>
+             </div>
+     
+        
+            <div class="review__list">
+                <div class="review__item">
+                    <div class="review__author">
+                        <div class="review__avatar"> <img src="./asset/icon/icon-user-black.svg" alt="user rating"></div> 
+                        <div>
+                            <p class="review__name">Trần Cao Minh</p>
+                            <p class="review__date">12/12/2024</p>
+                        </div>
+                    </div>
+                    <div class="review__content">
+                        <img  src="./asset/icon/icon-sao.svg" alt="stars">
+                        <img src="./asset/icon/icon-sao.svg" alt="stars">
+                        <img src="./asset/icon/icon-sao.svg" alt="stars">
+                        <img src="./asset/icon/icon-sao.svg" alt="stars">
+                        <img src="./asset/icon/icon-sao.svg" alt="stars">
+                        <p class="review__text">Chảo chắc chắn, cầm nặng tay nhưng không quá nặng. Nấu ăn nhanh, không bị dính và dễ vệ sinh. Dùng bếp từ rất ổn định. Mình dùng hơn 3 tháng rồi mà chảo vẫn như mới.</p>
+                    </div>
+                </div>
+        
+                <div class="review__item">
+                    <div class="review__author">
+                        <div class="review__avatar"> <img src="./asset/icon/icon-user-black.svg" alt="user rating"></div> 
+                        <div>
+                            <p class="review__name">Bùi Linh Chi</p>
+                            <p class="review__date">12/12/2024</p>
+                        </div>
+                    </div>
+                    <div class="review__content">
+                        <img  src="./asset/icon/icon-sao.svg" alt="stars">
+                        <img src="./asset/icon/icon-sao.svg" alt="stars">
+                        <img src="./asset/icon/icon-sao.svg" alt="stars">
+                        <img src="./asset/icon/icon-sao.svg" alt="stars">
+                        <img src="./asset/icon/icon-sao.svg" alt="stars">
+                        <p class="review__text">Mua chảo này để thay cái cũ, phải nói là đúng như kỳ vọng. Chảo giữ nhiệt tốt, chiên rán đồ ăn rất đều màu. Đặc biệt là không cần dùng nhiều dầu. Rất đáng đầu tư.</p>
+                    </div>
+                </div>
+        
+                <div class="review__item">
+                    <div class="review__author">
+                        <div class="review__avatar"> <img src="./asset/icon/icon-user-black.svg" alt="user rating"></div>
+                        <div>
+                            <p class="review__name">Bùi Linh Chi</p>
+                            <p class="review__date">12/12/2024</p>
+                        </div>
+                    </div>
+                    <div class="review__content">
+                        <img  src="./asset/icon/icon-sao.svg" alt="stars">
+                        <img src="./asset/icon/icon-sao.svg" alt="stars">
+                        <img src="./asset/icon/icon-sao.svg" alt="stars">
+                        <img src="./asset/icon/icon-sao.svg" alt="stars">
+                        <img src="./asset/icon/icon-sao-off.svg" alt="stars">
+                        <p class="review__text">Chảo tốt, nấu ăn không bị dính, nhưng khi rửa cần cẩn thận vì dễ để lại vết xước nếu dùng miếng chà quá cứng. Nếu cải thiện thêm về độ bền của bề mặt thì sẽ hoàn hảo.</p>
+                    </div>
+                </div>
+            </div>
+        
+            <button class="review__more">
+                XEM THÊM<img src="./asset/icon/icon-down-green.svg" alt="icon down">
+            </button>
+            </div>
+        </div>
+        
+        <!-- SIDEBAR --> 
+        <div class="product__sidebar">
+            <div class="product__title">Chảo Inox Impact</div>
+
+            <div class="product__rating">
+                <span class="product__score">4.8</span>
+                <span class="product__stars">
+                    <img  src="./asset/icon/icon-sao.svg" alt="stars">
+                    <img src="./asset/icon/icon-sao.svg" alt="stars">
+                    <img src="./asset/icon/icon-sao.svg" alt="stars">
+                    <img src="./asset/icon/icon-sao.svg" alt="stars">
+                    <img src="./asset/icon/icon-sao-0,5.svg" alt="stars">
+                </span>
+                <span class="product__reviews">5 đánh giá</span>
+            </div>
+        
+            <div class="product__price">
+                <span class="product__price-old">300.000đ</span>
+                <span class="product__price-new">250.000đ</span>
+                <span class="product__discount">-16%</span>
+            </div>
+        
+            <div class="product__options">
+                <div class="product__colors">
+                    <p class="product__label">Màu</p>
+                    <button class="product__color product__color--white"></button>
+                    <button class="product__color product__color--green"></button>
+                    <button class="product__color product__color--orange"></button>
+                </div>
+        
+                <div class="product__sizes">
+                    <p class="product__label">Kích thước</p>
+                    <button class="product__size">20cm</button>
+                    <button class="product__size">24cm</button>
+                    <button class="product__size">28cm</button>
+                </div>
+        
+                <div class="product__quantity">
+                    <p class="product__label">Số lượng</p>
+                    <button class="product__quantity-btn">−</button>
+                    <span class="product__quantity-value">1</span>
+                    <button class="product__quantity-btn">+</button>
+                </div>
+            </div>
+        
+            <div class="product__actions">
+                <button class="product__buy">MUA NGAY</button>
+                <button class ="product__cart">
+                    <img src="./asset/icon/Icon-cart.svg" alt="button cart">
+                </button>
+            </div>
+        </div>
+    
+    </div>
+
+    <!-- SẢN PHẨM TƯƠNG TỰ -->
+    <div class="product__similar">
+        <div class="product__similar-title">Sản Phẩm Tương Tự</div> 
+     
+        <div class="product__cards">
+            <div class="product__card">
+                <a href="./ChiTietSanPham.html"><img src="./asset/img/img-chao.png" alt="Chảo Inox Impact" class="product__card-image"></a>
+                <div class="product__card-text">
+                    <p class="product__card-name">
+                        Chảo Inox Impact <br>
+                        <span class="product__card-price">250.000đ <span class="product__card-old-price">250.000đ</span></span>
+                    </p>
+                    <a href="./ChiTietSanPham.html" class ="product__card-cart"><img src="./asset/icon/Icon-cart.svg" alt="button cart"></a>
+                </div>
+            </div>
+            <div class="product__card">
+                <a href="./ChiTietSanPham.html"><img src="./asset/img/img-noi.png" alt="Nồi Lẻ Anod" class="product__card-image"></a>
+                <div class="product__card-text">
+                    <p class="product__card-name">
+                        Nồi Lẻ Anod <br>
+                        <span class="product__card-price">250.000đ <span class="product__card-old-price">250.000đ</span></span>
+                    </p>
+                    <a href="./ChiTietSanPham.html" class ="product__card-cart"><img src="./asset/icon/Icon-cart.svg" alt="button cart"></a>
+                </div>
+            </div>
+            <div class="product__card">
+                <a href="./ChiTietSanPham.html"><img src="./asset/img/img-mayxay.png" alt="Máy Xay Sinh Tố" class="product__card-image"></a>
+                <div class="product__card-text">
+                    <p class="product__card-name">
+                        Máy Xay Sinh Tố <br>
+                        <span class="product__card-price">250.000đ <span class="product__card-old-price">250.000đ</span></span>
+                    </p>
+                    <a href="./ChiTietSanPham.html" class ="product__card-cart"><img src="./asset/icon/Icon-cart.svg" alt="button cart"></a>
+                </div>                                                                           
+            </div>
+            <div class="product__card">
+                <a href="./ChiTietSanPham.html"><img src="./asset/img/img-noicomdien.png" alt="Nồi Cơm Điện" class="product__card-image"></a>
+                <div class="product__card-text">
+                    <p class="product__card-name">
+                        Nồi Cơm Điện <br>
+                        <span class="product__card-price">250.000đ <span class="product__card-old-price">250.000đ</span></span>
+                    </p>
+                    <a href="./ChiTietSanPham.html" class ="product__card-cart"><img src="./asset/icon/Icon-cart.svg" alt="button cart"></a>
+                </div>
+            </div>
+        </div>
+    </div>
+      
+
+    <!-- LABEL2 -->
+    <div class="benefits">
+        <div class="benefits__list">
+            <div class="benefits__item">
+                <img src="./asset/icon/icon-box.svg" alt="Giao hàng miễn phí" class="benefits__icon">
+                <p class="benefits__text">Miễn Phí Giao Hàng Với Đơn Hàng Từ 900K</p>
+            </div>
+
+            <div class="benefits__item">
+                <img src="./asset/icon/icon-Truck.svg" alt="Giao hàng tận nơi" class="benefits__icon">
+                <p class="benefits__text">Hỗ Trợ Giao Hàng Tận Nơi</p>
+            </div>
+    
+            <div class="benefits__item">
+                <img src="./asset/icon/icon-medal.svg" alt="Bảo hành chính hãng" class="benefits__icon">
+                <p class="benefits__text">Cam Kết Bảo Hành Chính Hãng</p>
+            </div>
+    
+            <div class="benefits__item">
+                <img src="./asset/icon/icon-voucher.svg" alt="Ưu đãi voucher" class="benefits__icon">
+                <p class="benefits__text">Ưu Đãi Voucher Lên Đến 500K</p>
+            </div>
+    
+        </div>
+    </div>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="footer__container">
+    
+            <!-- Cột 1: Thông tin công ty -->
+            <div class="footer__column footer__company">
+                <div class="footer__logo"><img src="./asset/icon/HOUSEZY.svg" alt="logo HOUSEZY"></div>
+                <p class="footer__name font600 ">CÔNG TY CỔ PHẦN HOUSEZY</p>
+                
+                <div class="footer__contact font400">
+                    <p class="footer__text"><span class="font600">Địa chỉ:</span> 27 Hoàng Hoa Thám, P. 6, Q. Bình Thạnh, TP. Hồ Chí Minh</p>
+                    <p class="footer__text"><span class="font600">Số điện thoại:</span> 0888 869 300</p>
+                    <p class="footer__text"><sapn class="font600">Email:</sapn> info@epal.vn</p>
+                </div>
+
+                <div class="footer__support font400">
+                    <p class="footer__text">Tư vấn hỗ trợ (8:00 - 17:30)</p>
+                    <p class="footer__text">0888 869 300</p>
+                    <p class="footer__text">0888 869 300</p>
+                </div>
+    
+                <!-- Mạng xã hội -->
+                <div class="footer__social">
+                    <a href="#" class="footer__social-icon"><img src="./asset/icon/icon-facebook.svg" alt="Facebook"></a>
+                    <a href="#" class="footer__social-icon"><img src="./asset/icon/icon-instargram.svg" alt="Instagram"></a>
+                    <a href="#" class="footer__social-icon"><img src="./asset/icon/icon-messenger.svg" alt="Messenger"></a>
+                    <a href="#" class="footer__social-icon"><img src="./asset/icon/icon-zalo.svg" alt="Zalo"></a>
+                    <a href="#" class="footer__social-icon"><img src="./asset/icon/icon-X.svg" alt="X"></a>
+                    <a href="#" class="footer__social-icon"><img src="./asset/icon/icon-pinterest.svg" alt="Pinterest"></a>
+                </div>
+            </div>
+    
+            <!-- Cột 2: Về HOUSEZY -->
+            <div class="footer__column footer__about">
+                <div class="footer__title font600">Về HOUSEZY</div>
+                <ul class="footer__list font400">
+                    <li class="footer__item"><a href="#" class="footer__link">Giới Thiệu</a></li>
+                    <li class="footer__item"><a href="./index.html" class="footer__link">Trang Chủ</a></li>
+                    <li class="footer__item"><a href="./DanhMucSanPham.html" class="footer__link">Sản Phẩm</a></li>
+                    <li class="footer__item"><a href="./DanhMucTinTuc.html" class="footer__link">Tin Tức</a></li>
+                    <li class="footer__item"><a href="./LienHe.html" class="footer__link">Liên Hệ</a></li>
+                </ul>
+            </div>
+            <!-- Cột 3: Chính Sách -->
+            <div class="footer__column footer__policy">
+                <div class="footer__title font600">Chính Sách</div>
+                <ul class="footer__list font400">
+                    <li class="footer__item"><a href="./TrungTamHoTro.html" class="footer__link">Chính Sách Hoàn Tiền</a></li>
+                    <li class="footer__item"><a href="#" class="footer__link">Chính Sách Giao Hàng</a></li>
+                    <li class="footer__item"><a href="#" class="footer__link">Chính Sách Bảo Hành Thu Đổi</a></li>
+                    <li class="footer__item"><a href="#" class="footer__link">Chính Sách Khách Hàng Thân Thiết</a></li>
+                    <li class="footer__item"><a href="#" class="footer__link">Chính Sách Bảo Mật Thông Tin Khách Hàng</a></li>
+                    <li class="footer__item"><a href="#" class="footer__link">Chính Sách Xử Lý Dữ Liệu Cá Nhân</a></li>
+                </ul>
+            </div>
+    
+        </div>
+    </footer>
+    <!-- Dòng bản quyền -->
+    <div class="footer__bottom">
+        <p class="footer__copyright">© All Rights Reserved. Design By EPAL Solution.</p>
+    </div>
+
+    <!-- Form Modal Đánh Giá  -->
+
+    <div class="review__modal js__rating-modal">
+        <div class="review__modal-content js__rating-content">
+            <div class="review__modal-title">Đánh Giá</div>
+    
+            <div class="review__modal-stars">
+                <img class="review__modal-star" src="./asset/icon/icon-sao-to.svg" alt="icon star-on">
+                <img class="review__modal-star" src="./asset/icon/icon-sao-to-off.svg" alt="icon star-off">
+                <img class="review__modal-star" src="./asset/icon/icon-sao-to-off.svg" alt="icon star-off">
+                <img class="review__modal-star" src="./asset/icon/icon-sao-to-off.svg" alt="icon star-off">
+                <img class="review__modal-star" src="./asset/icon/icon-sao-to-off.svg" alt="icon star-off">
+            </div>
+    
+            <form class="review__modal-form">
+                <input type="text" class="review__modal-input" placeholder="Họ và tên">
+                <input type="tel" class="review__modal-input" placeholder="Số điện thoại">
+                <textarea class="review__modal-textarea" placeholder="Nội dung"></textarea>
+    
+                <label class="review__modal-checkbox">
+                    <input type="checkbox" class="review__modal-checkbox-input">
+                    Đồng ý với <a href="#" class="review__modal-link">điều khoản</a> và 
+                    <a href="#" class="review__modal-link">điều kiện</a> của chúng tôi
+                </label>
+    
+                <button type="submit" class="review__modal-button">GỬI</button>
+            </form>
+        </div>
+    </div>
+
+    <script>
+        const ratingBtn = document.querySelector('.js__rating-btn') 
+        const modalRating = document.querySelector('.js__rating-modal')
+        const modalRatingContent = document.querySelector('.js__rating-content')
+
+        function showRatingForm() {
+            modalRating.classList.add('open')
+        }
+
+        function  hideRatingForm() {
+            modalRating.classList.remove('open')
+        }
+        
+        ratingBtn.addEventListener('click', showRatingForm)
+
+        modalRating.addEventListener('click', hideRatingForm )
+
+        modalRatingContent.addEventListener('click', function(event){
+            event.stopPropagation()
+        } )
+    </script>
+
+    <!-- modal form giỏ hàng -->
+    <div class="cart__modal js__cart-modal">
+        <div class="cart__content js__cart-content">
+            <div class="cart__header">
+                <div class="cart__title">Giỏ Hàng (2)</div>
+                <button class="cart__close-button js__cart-modal--close">
+                    <img src="./asset/icon/icon-close.svg" alt="icon close">
+                </button>
+            </div>
+    
+            <ul class="cart__items">
+                <li class="cart__item">
+                    <div class="cart__item-image-wrapper">
+                        <img src="./asset/img/img-chao.png" alt="Chảo Inox Impact" class="cart__item-image">
+                    </div>
+                    <div class="cart__item-details">
+                        <div class="cart__item-name">Chảo Inox Impact</div>
+                        <p class="cart__item-option">Màu bạc, 20cm</p>
+                        <div class="cart__item-price">
+                            <span class="cart__item-price--old">300.000đ</span>
+                            <span class="cart__item-price--current">250.000đ</span>
+                        </div>
+                        <div class="cart__item-quantity">
+                            <button class="cart__quantity-btn">−</button>
+                            <span class="cart__quantity-value">1</span>
+                            <button class="cart__quantity-btn">+</button>
+                        </div>
+                    </div>
+                    <button class="cart__item-remove-button">
+                        <img src="./asset/icon/icon-bin.svg" alt="icon bin">
+                    </button>
+                </li>
+    
+                <li class="cart__item">
+                    <div class="cart__item-image-wrapper">
+                        <img src="./asset/img/img-chao.png" alt="Chảo Inox Impact" class="cart__item-image">
+                    </div>
+                    <div class="cart__item-details">
+                        <div class="cart__item-name">Chảo Inox Impact</div>
+                        <p class="cart__item-option">Màu bạc, 24cm</p>
+                        <div class="cart__item-price">
+                            <span class="cart__item-price--old">300.000đ</span>
+                            <span class="cart__item-price--current">250.000đ</span>
+                        </div>
+                        <div class="cart__item-quantity">
+                            <button class="cart__quantity-btn">−</button>
+                            <span class="cart__quantity-value">1</span>
+                            <button class="cart__quantity-btn">+</button>
+                        </div>
+                    </div>
+                    <button class="cart__item-remove-button">
+                        <img src="./asset/icon/icon-bin.svg" alt="icon bin">
+                    </button>
+                </li>
+            </ul>
+    
+            <div class="cart__footer">
+                <a  href="./html_ThanhToan/ThanhToan_ChuaDangNhap.html" class="cart__checkout-button" >THANH TOÁN</a>
+                <a href="./DanhMucSanPham.html" class="cart__continue-shopping-button" >TIẾP TỤC MUA HÀNG</a>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const cartBtn = document.querySelector('.js__cart-btn') 
+        const modalCart = document.querySelector('.js__cart-modal')
+        const modalCartClose = document.querySelector('.js__cart-modal--close')
+        const modalCartContent = document.querySelector('.js__cart-content')
+
+        function showCartForm() {
+            modalCart.classList.add('open')
+        }
+
+        function  hideCartForm() {
+            modalCart.classList.remove('open')
+        }
+        
+        cartBtn.addEventListener('click', showCartForm)
+
+        modalCart.addEventListener('click', hideCartForm )
+
+        modalCartClose.addEventListener('click', hideCartForm)
+
+        modalCartContent.addEventListener('click', function(event){
+            event.stopPropagation()
+        } )
+    </script>
+
+</html>
